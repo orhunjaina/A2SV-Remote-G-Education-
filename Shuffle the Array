@@ -1,0 +1,15 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        n = len(nums)/2 
+        dizi1 = []
+        dizi2 = []
+        yazdir = []
+        x=0
+        for i in range(n):
+            dizi1 += [nums[i]]
+        for j in range(n,n*2):
+            dizi2 += [nums[j]]
+        for x in range(n):
+            yazdir += [dizi1[x]]+[dizi2[x]]
+            x += 1
+        return(yazdir)
