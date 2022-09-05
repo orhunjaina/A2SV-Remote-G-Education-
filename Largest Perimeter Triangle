@@ -1,0 +1,18 @@
+class Solution(object):
+    def largestPerimeter(self, nums):
+        while True:
+            nums = sorted(nums)
+            a = nums[-1]
+            b = nums[-2]
+            c = nums[-3]
+            x = a+b
+            y = a+c
+            z = b+c
+            if x>c and y>b and z>a:
+                return(a+b+c)
+                break
+            else:
+                if len(nums)>3:
+                    nums.pop()
+                else:
+                    return(0)
