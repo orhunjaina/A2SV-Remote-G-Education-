@@ -1,0 +1,10 @@
+class Solution(object):
+    def hIndex(self, citations):
+        citations.sort(reverse=True)
+        k=0
+        x=1
+        for i in citations:
+            if i>=x:
+                k=x
+                x+=1
+        return(k)
