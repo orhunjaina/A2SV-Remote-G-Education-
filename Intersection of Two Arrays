@@ -1,0 +1,7 @@
+class Solution(object):
+    def intersection(self, nums1, nums2):
+        dizi=[]
+        for i in nums2:
+            if i in nums1 and i not in dizi:
+                dizi+=[i]
+        return(dizi)
