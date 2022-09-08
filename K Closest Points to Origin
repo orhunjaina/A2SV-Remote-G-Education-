@@ -1,0 +1,16 @@
+class Solution(object):
+    def kClosest(self, points, k):
+        sqrts = []
+        arr = []
+        for i in points:
+            sum=0
+            for x in i:
+                sum += x*x
+            sum = sum ** 0.5
+            sqrts.append(sum)
+        for i in range(k):
+            o = sqrts.index(min(sqrts))
+            arr.append(points[o])
+            del sqrts[o]
+            del points[o]
+        return(arr)
