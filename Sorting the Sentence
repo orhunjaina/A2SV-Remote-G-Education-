@@ -1,0 +1,13 @@
+class Solution(object):
+    def sortSentence(self, s):
+        nums = []
+        dizi = []
+        for i in (s.split(" ")):
+            nums.append(i[-1])
+        nums.sort()
+        for i in nums:
+            for y in (s.split(" ")):
+                if i in y:
+                    y = y[:-1]
+                    dizi.append(y) 
+        return(" ".join(dizi))
