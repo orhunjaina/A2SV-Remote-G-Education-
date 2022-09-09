@@ -1,0 +1,15 @@
+class Solution(object):
+    def kthLargestNumber(self, nums, k):
+        arr = []
+        for i in nums:
+            arr.append(int(i))
+        arr.sort(reverse=True)
+        a=0
+        s=1
+        for i in arr:
+            a = i
+            if s == k:
+                return(str(a))
+            else:
+                s+=1
+                
