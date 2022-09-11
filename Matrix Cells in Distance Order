@@ -1,0 +1,7 @@
+class Solution(object):
+    def allCellsDistOrder(self, rows, cols, rCenter, cCenter):
+        output = []
+        for i in range(rows):
+            for j in range(cols):
+                output.append([i,j])
+        return sorted(output, key=lambda a: abs(a[0]-rCenter)+abs(a[1]-cCenter))  
